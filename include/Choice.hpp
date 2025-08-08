@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 
-#include "Event.hpp"
+#include "IEvent.hpp"
 #include "Room.hpp"
 
 namespace src {
