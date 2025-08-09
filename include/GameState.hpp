@@ -3,6 +3,7 @@
 #include <vector>
 
 #include "Room.hpp"
+#include "Item.hpp"
 
 namespace src {
 
@@ -19,7 +20,11 @@ public:
         current_room_id_ = id;
     }
 
-    src::Room GetCurrentRoom() const {
+    const src::Room& GetCurrentRoom() const {
+        return rooms_[current_room_id_];
+    }
+
+    src::Room& GetCurrentRoom() {
         return rooms_[current_room_id_];
     }
 
@@ -27,8 +32,21 @@ public:
         rooms_.push_back(room);
     }
 
+    void AddItem(const src::Item& item) {
+        inventory_.push_back(item);
+    }
+
+    const std::vector<src::Room>& rooms() const {
+        return rooms_;
+    }
+
+    const std::vector<src::Item>& inventory() const {
+        return inventory_;
+    }
+
 private:
     std::vector<src::Room> rooms_;
+    std::vector<src::Item> inventory_;
     size_t current_room_id_ = 0;
 };
 
