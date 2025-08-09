@@ -4,8 +4,8 @@
 #include <string>
 #include <vector>
 
-#include "Choice.hpp"
-#include "Entity.hpp"
+#include "Core/Choice.hpp"
+#include "Core/Entity.hpp"
 
 namespace src {
 

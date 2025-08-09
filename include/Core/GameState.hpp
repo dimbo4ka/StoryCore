@@ -2,8 +2,8 @@
 
 #include <vector>
 
-#include "Room.hpp"
-#include "Item.hpp"
+#include "Core/Room.hpp"
+#include "Core/Item.hpp"
 
 namespace src {
 

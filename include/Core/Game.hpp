@@ -3,8 +3,8 @@
 #include <memory>
 #include <string>
 
-#include "GameState.hpp"
-#include "IRenderer.hpp"
+#include "Core/GameState.hpp"
+#include "Interfaces/IRenderer.hpp"
 
 namespace src {
 
