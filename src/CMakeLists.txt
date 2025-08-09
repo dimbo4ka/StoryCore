@@ -1,6 +1,5 @@
 add_library(storycore STATIC
     Game.cpp
-    ConsoleRenderer.cpp
 )
 target_include_directories(storycore PUBLIC
     ${CMAKE_SOURCE_DIR}/include

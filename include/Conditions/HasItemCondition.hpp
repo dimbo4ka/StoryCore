@@ -3,8 +3,8 @@
 #include <iostream>
 #include <string>
 
-#include "GameState.hpp"
-#include "ICondition.hpp"
+#include "Core/GameState.hpp"
+#include "Interfaces/ICondition.hpp"
 
 namespace src {
 

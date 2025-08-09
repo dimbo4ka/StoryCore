@@ -1,6 +1,6 @@
 #pragma once
 
-#include "GameState.hpp"
+#include "Core/GameState.hpp"
 
 namespace src {
 

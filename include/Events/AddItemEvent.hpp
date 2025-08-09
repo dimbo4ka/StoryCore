@@ -1,7 +1,7 @@
 #pragma once
 
-#include "IEvent.hpp"
-#include "GameState.hpp"
+#include "Interfaces/IEvent.hpp"
+#include "Core/GameState.hpp"
 
 namespace src {
 

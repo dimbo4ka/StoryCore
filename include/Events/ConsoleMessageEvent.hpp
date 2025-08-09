@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-#include "IEvent.hpp"
+#include "Interfaces/IEvent.hpp"
 
 namespace src {
 

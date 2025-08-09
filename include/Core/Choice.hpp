@@ -4,9 +4,9 @@
 #include <string>
 #include <vector>
 
-#include "ICondition.hpp"
-#include "IEvent.hpp"
-#include "Room.hpp"
+#include "Interfaces/ICondition.hpp"
+#include "Interfaces/IEvent.hpp"
+#include "Core/Room.hpp"
 
 namespace src {
 
