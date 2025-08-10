@@ -10,8 +10,8 @@ namespace src {
 
 class HasItemCondition : public src::ICondition {
 public:
-    explicit HasItemCondition(std::string item_name)
-        : item_name_(item_name) {}
+    HasItemCondition(std::string item_name)
+        : item_name_(std::move(item_name)) {}
 
     bool IsMet(const src::GameState& game_state) const override {
         for (const auto& item : game_state.inventory()) {

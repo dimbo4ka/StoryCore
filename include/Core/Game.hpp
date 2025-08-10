@@ -10,9 +10,6 @@ namespace src {
 
 class Game {
 public:
-    Game() = default;
-    virtual ~Game() = default;
-    
     void Run();
     void SetRenderer(std::unique_ptr<src::IRenderer> renderer);
     void LoadStory(const std::string& filename);
