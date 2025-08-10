@@ -5,19 +5,18 @@
 #include <vector>
 
 #include "Core/Choice.hpp"
-#include "Core/Entity.hpp"
 
 namespace src {
 
 struct Room {
-    Room(const std::string& description, const std::string& name, 
+    Room(std::string description, std::string name, 
          const std::vector<Choice>& choices = {}, size_t id = 0)
-        : description(description), name(name), choices(choices), id(id) {}
+        : description(std::move(description)), name(std::move(name))
+        , choices(choices), id(id) {}
 
     std::string description;
     std::string name;
     std::vector<src::Choice> choices;
-    std::vector<src::Entity> entities;
     size_t id;
 };
 

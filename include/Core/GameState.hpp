@@ -1,5 +1,6 @@
 #pragma once
 
+#include <algorithm>
 #include <vector>
 
 #include "Core/Room.hpp"
@@ -8,10 +9,7 @@
 namespace src {
 
 class GameState {
-public:
-    GameState() = default;
-    ~GameState() = default;
-    
+public:    
     size_t current_room_id() const {
         return current_room_id_;
     }
@@ -42,6 +40,23 @@ public:
 
     const std::vector<src::Item>& inventory() const {
         return inventory_;
+    }
+
+    bool HasItem(const std::string& name) const {
+        return std::any_of(inventory_.begin(), inventory_.end(), [&](const src::Item& item) {
+            return item.name() == name;
+        });
+    }
+
+    bool RemoveItem(const std::string& name) {
+        auto it = std::remove_if(inventory_.begin(), inventory_.end(), [&](const src::Item& item) {
+            return item.name() == name;
+        });
+        if (it != inventory_.end()) {
+            inventory_.erase(it, inventory_.end());
+            return true;
+        }
+        return false;
     }
 
 private:
